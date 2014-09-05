@@ -14,6 +14,10 @@ int main(int argv, char* argc[]) {
     stringstream ss;
     //READ THE FILE
     fstream myfile (argc[1]);
+    if (myfile.fail() ) {
+        cout<<"WRONG FILE"<<endl;
+        return 1;
+    }
     getline (myfile, temp);
     //GET THE NUMBER OF LINES NEED TO BE READ
     ss<<temp;
